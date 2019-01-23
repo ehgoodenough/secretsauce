@@ -1,0 +1,10 @@
+# Package Management
+package-lock.json
+
+# Dependencies
+node_modules
+
+# Temporary
+.DS_Store
+*.log
+._*
