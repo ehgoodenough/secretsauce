@@ -1,9 +1,11 @@
 {
   "name": "secretsauce",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A utility for saving your secrets in AWS DynamoDB.",
   "author": "Andrew McPherson <@ehgoodenough>",
   "main": "secretsauce.js",
+  "bin": "secretsauce.js",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/ehgoodenough/secretsauce"
