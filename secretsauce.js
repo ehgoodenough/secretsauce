@@ -16,6 +16,10 @@ const SECRET_TABLE = {
 }
 
 secretsauce.set = async function(name, secret) {
+    if(name === undefined || secret === undefined) {
+        throw new Error("secretsauce.set must be given a `name` and `secret`")
+    }
+
     await dynamo.createTable(SECRET_TABLE).promise().catch((error) => {
         if(error.name !== "ResourceInUseException") {
             throw error
@@ -29,6 +33,10 @@ secretsauce.set = async function(name, secret) {
 }
 
 secretsauce.get = async function(name) {
+    if(name === undefined) {
+        throw new Error("secretsauce.get must be given a `name`")
+    }
+
     if(secretsauce.cache[name] !== undefined) {
         return Promise.resolve(secretsauce.cache[name])
     }
