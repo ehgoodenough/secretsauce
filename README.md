@@ -1,4 +1,4 @@
-# Secretsauce #
+# secretsauce #
 
 A utility for saving your secrets in AWS DynamoDB.
 
@@ -7,6 +7,8 @@ A utility for saving your secrets in AWS DynamoDB.
 From the command-line:
 
 ```
+npm install --global secretsauce
+
 secretsauce set EXAMPLE 1234567890
 secretsauce get EXAMPLE
 ```
